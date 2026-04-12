@@ -92,8 +92,8 @@
 ### Request
 ```json
 {
-  "title": "제목",
-  "writer": "작성자",
+  "title": "제목바꿈",
+  "writer": "작성자도바꿈",
   "password": "비밀번호"
 }
 ```
@@ -106,9 +106,9 @@
 ```json
 {
   "id": 1,
-  "title": "제목",
+  "title": "제목바꿈",
   "contents": "내용",
-  "writer": "작성자",
+  "writer": "작성자도바꿈",
   "createdAt": "2026-04-12T12:00:00",
   "modifiedAt": "2026-04-13T12:00:00"
 }
