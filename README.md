@@ -124,7 +124,7 @@
 ## 일정 삭제 API
 
 - Method: DELETE
-- URL: /schedules/{scheduleId}
+- URL: /schedules/{scheduleId}?password={schedulePassword}
 
 ### 인증/인가
 
