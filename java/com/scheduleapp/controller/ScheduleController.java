@@ -42,4 +42,15 @@ public class ScheduleController {
     ) {
         return ResponseEntity.status(HttpStatus.OK).body(scheduleService.updateSchedule(scheduleId, request));
     }
+
+    // 삭제
+    @DeleteMapping("/schedules/{scheduleId}")
+    public ResponseEntity<Void> deleteSchedule(
+            @PathVariable Long scheduleId,
+            @RequestParam String password
+    ) {
+        scheduleService.deleteSchedule(scheduleId, password);
+
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
