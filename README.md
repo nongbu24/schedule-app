@@ -130,13 +130,6 @@
 
 - password 필요
 
-### Response
-```json
-{
-
-}
-```
-
 ### 설명
 
 - id를 선택하여 일정을 삭제합니다.
@@ -145,3 +138,23 @@
 ---
 
 ## ERD
+<img width="293" height="186" alt="스크린샷 2026-04-13 오후 7 16 12" src="https://github.com/user-attachments/assets/36ce4b49-36dd-4c64-b066-b559b1bba7a6" />
+
+---
+
+#### 1. 3 Layer Architecture(Controller, Service, Repository)를 적절히 적용했는지 확인해 보고, 왜 이러한 구조가 필요한지 작성해 주세요.
+
+저는 제가 적절히 적용했다고 생각합니다!
+요청/응답 처리 + 비즈니스 로직 + DB 접근 이 3가지 역할을 가진 계층으로 나눠 코드가 덜 꼬이고, 더 쉽게 고칠 수 있게 만들어주기 때문에 3 Layer Architecture가 필요합니다.
+
+#### 2. @RequestParam, @PathVariable, @RequestBody가 각각 어떤 어노테이션인지, 어떤 특징을 갖고 있는지 작성해 주세요.
+
+@RequestParam은 URL의 ? 뒤의 오는 파라미터들을 처리할 때 사용합니다.
+GET /schedule?writer=작성자 요청이 있다면 이 중 ? 뒤에 오는 writer=작성자가 쿼리 파라미터입니다.
+required = false로 설정하지 않으면 파라미터가 필수가 됩니다. (defalut는 true)
+
+@PathVariable은 URL 경로의 일부를 변수로 받을 때 사용합니다.
+GET /schedules/123 형태의 요청에서 123 값을 받을 수 있습니다.
+
+@RequestBody는 HTTP 요청의 Body에 있는ㄴ 데이터를 객체로 변환할 때 사용합니다.
+주로 JSON 형태의 데이터를 받을 때 사용합니다.
