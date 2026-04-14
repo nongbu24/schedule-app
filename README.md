@@ -156,5 +156,5 @@ required = false로 설정하지 않으면 파라미터가 필수가 됩니다. 
 @PathVariable은 URL 경로의 일부를 변수로 받을 때 사용합니다.
 GET /schedules/123 형태의 요청에서 123 값을 받을 수 있습니다.
 
-@RequestBody는 HTTP 요청의 Body에 있는ㄴ 데이터를 객체로 변환할 때 사용합니다.
+@RequestBody는 HTTP 요청의 Body에 있는 데이터를 객체로 변환할 때 사용합니다.
 주로 JSON 형태의 데이터를 받을 때 사용합니다.
